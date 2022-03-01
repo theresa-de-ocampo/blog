@@ -1,12 +1,12 @@
+@extends('layout')
+
 <?php
 /**
  * @var App\Models\Post $post Parameter from View
-*/
+ */
 ?>
-<!DOCTYPE html>
-<title>My Blog</title>
-<link rel="stylesheet" href="/app.css">
-<body>
+
+@section('content')
     <article>
         <h1>{{ $post->title }}</h1>
         <div>
@@ -14,4 +14,4 @@
         </div>
     </article>
     <a href="/">Go Back</a>
-</body>
+@endsection
