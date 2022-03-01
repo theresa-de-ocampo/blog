@@ -1,5 +1,6 @@
 ---
 title: My First Post
+slug: my-first-post
 excerpt:  Alpha ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam dolor, error facilis itaque iure.
 date: 2021-01-01
 ---

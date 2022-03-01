@@ -1,6 +1,6 @@
 <?php
 /**
- * @var string $post Parameter from View
+ * @var App\Models\Post $post Parameter from View
 */
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="/app.css">
 <body>
     <article>
-        <?= $post; ?>
+        <h1><?= $post->title; ?></h1>
+        <div>
+            <?= $post->body; ?>
+        </div>
     </article>
     <a href="/">Go Back</a>
 </body>

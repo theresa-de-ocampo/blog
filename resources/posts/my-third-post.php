@@ -1,5 +1,6 @@
 ---
 title: My Third Post
+slug: my-third-post
 excerpt:  Charlie ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam dolor, error facilis itaque iure
 date: 2021-03-03
 ---

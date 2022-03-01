@@ -1,5 +1,6 @@
 ---
 title: My Fourth Post
+slug: my-fourth-post
 excerpt:  Delta ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aperiam dolor, error facilis itaque iure
 date: 2021-05-21
 ---
