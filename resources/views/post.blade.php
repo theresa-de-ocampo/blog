@@ -1,12 +1,10 @@
-@extends('components.layout')
-
 <?php
 /**
  * @var App\Models\Post $post Parameter from View
  */
 ?>
 
-@section('content')
+<x-layout>
     <article>
         <h1>{{ $post->title }}</h1>
         <div>
@@ -14,4 +12,4 @@
         </div>
     </article>
     <a href="/">Go Back</a>
-@endsection
+</x-layout>

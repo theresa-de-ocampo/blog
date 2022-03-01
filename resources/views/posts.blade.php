@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var array $posts Parameter from view
+ */
+?>
+
 <x-layout>
     @foreach ($posts as $post)
         <article class="{{ $loop->even ? 'mb-6' : '' }}">
