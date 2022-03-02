@@ -13,11 +13,6 @@ class Post extends Model
     // protected $guarded = ['id'];
     protected $guarded = []; // Never perform mass assignment unless you're in control of the array.
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
-
     public function category()
     {
         return $this->belongsTo(Category::class);
