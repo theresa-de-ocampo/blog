@@ -1,9 +1,3 @@
-<?php
-/**
- * @var array $posts Parameter from view
- */
-?>
-
 <x-layout>
     @include('_post-header')
 
