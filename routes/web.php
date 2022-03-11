@@ -29,7 +29,7 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 })->name('category');*/
 
 Route::get('authors/{author:username}', function (User $author) {
-    return view('posts', [
+    return view('posts.index', [
        'posts' => $author->posts
     ]);
 });
