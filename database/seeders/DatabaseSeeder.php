@@ -24,6 +24,15 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user->id
         ]);
 
-        Post::factory(25)->create();
+        Post::factory(20)->create();
+
+        $category = Category::factory()->create([
+            'name' => 'Career',
+            'slug' => 'career'
+        ]);
+
+        Post::factory(10)->create([
+            'category_id' => $category
+        ]);
     }
 }
