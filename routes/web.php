@@ -5,16 +5,21 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
+use MailchimpMarketing\ApiClient;
 
 Route::get('ping', function () {
-    $mailchimp = new \MailchimpMarketing\ApiClient();
+    $mailchimp = new ApiClient();
 
     $mailchimp->setConfig([
         'apiKey' => config('services.mailchimp.key'),
         'server' => 'us14'
     ]);
 
-    $response = $mailchimp->ping->get();
+    $response = $mailchimp->lists->addListMember("5d58904c3c", [
+        'email_address' => 'maria.theresa.g.de.ocampo@gmail.com',
+        'status' => 'subscribed'
+    ]);
+
     dd($response);
 });
 
