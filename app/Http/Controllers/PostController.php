@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
+use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
@@ -16,5 +17,10 @@ class PostController extends Controller
 
     public function show(Post $post) {
         return view('posts.show', ['post' => $post]);
+    }
+
+    public function create(){
+
+        return view('posts.create');
     }
 }
