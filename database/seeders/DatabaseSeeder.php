@@ -17,14 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $user = User::factory()->create([
-            'name' => 'John Doe'
+            'username' => 'Ros',
+            'name' => 'Ros Medina'
         ]);
-
-        Post::factory(5)->create([
-            'user_id' => $user->id
-        ]);
-
-        Post::factory(20)->create();
 
         $category = Category::factory()->create([
             'name' => 'Career',
@@ -32,7 +27,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory(10)->create([
-            'category_id' => $category
+            'user_id' => $user->id,
+            'category_id' => $category->id
         ]);
+
+        Post::factory(20)->create();
     }
 }
