@@ -28,10 +28,12 @@
                         <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->username }}!</button>
                     </x-slot>
 
-                    <x-dropdown-item href="/admin/posts">All Posts</x-dropdown-item>
-                    <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">
-                        New Post
-                    </x-dropdown-item>
+                    @admin
+                        <x-dropdown-item href="/admin/posts">All Posts</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">
+                            New Post
+                        </x-dropdown-item>
+                    @endadmin
                     <x-dropdown-item
                         href="#"
                         x-data="{}"
